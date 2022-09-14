@@ -46,6 +46,8 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount = 1 + errorCount;
+    console.log(errorCount);
   }
 
   // check if given question text is equal to user typed text
@@ -103,7 +105,7 @@ const start = () => {            //---------------------------------2-----------
   // If already started, do not start again
   if (startTime) return;
 
-  let count = 3;
+  let count = 1;
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
