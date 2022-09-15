@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css" />
+
+</head>
+
+<body class="container text-white mt-5">
+    <h2>Difference Between Local Storage, Session Storage</h2>
+    <p> Answer :
+        Local Storage: This read-only interface property provides access to the Document’s local storage object, the
+        stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets
+        cleared when the page session ends – that is when the page is closed. It is cleared when the last “private” tab
+        of a browser is closed (localStorage data for a document loaded in a private browsing or incognito session).
+        Session Storage :Session Storage objects can be accessed using the sessionStorage read-only property. The
+        difference between sessionStorage and localStorage is that localStorage data does not expire, whereas
+        sessionStorage data is cleared when the page session ends.
+
+        A unique page session gets created once a document is loaded in a browser tab. Page sessions are valid for only
+        one tab at a time.
+    </p>
+    <h2>Difference between Block scope and Global scope in Javascript? </h2>
+    <p>Global Scope
+        The variables defined outside of any function or curly brackets are known as global variables and have global
+        scope. Global scope means that the variables can be accessed from any part of that program, any function or
+        conditional state can access that variable.
+        Block Scope
+        Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables
+        inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something
+        else. You are only allowed to refer to these variables from within the curly brackets {}.
+
+    </p>
+    <h2>How does Event loop Work</h2>
+    <p>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty,
+        the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively
+        runs it.
+
+        Such an iteration is called a tick in the Event Loop. Each event is just a function callback.</p>
+
+    <h2></h2>
+    <p>
+        JavaScript uses the undefined value in the following situations.
+
+        1) Accessing an uninitialized variable
+        When you declare a variable and don’t initialize it to a value, the variable will have a value of undefined.
+        2) Accessing a non-existing property of an object
+        If you access a non-existing property of an object, you’ll get undefined.
+        3) Function parameters
+        When you call a function with a number of parameters, you often pass the same number of arguments.
+        4) Functions return a value
+        A function that doesn’t have a return statement implicitly returns undefined.
+        5) Accessing out-of-bounds array elements
+        When you access an array element that is out-of-bounds, you’ll get the undefined value.
+    </p>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
