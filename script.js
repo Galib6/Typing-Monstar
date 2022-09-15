@@ -5,6 +5,14 @@ const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
+// ------------------------Space Bar Scroll Prevention----------------
+// ----------------------------------------------------------------------- 
+window.addEventListener('keydown', function (e) {
+  if (e.keyCode == 32 && e.target == document.body) {
+    e.preventDefault();
+  }
+});
+
 // variables
 let userText = "";
 let errorCount = 0;
@@ -24,7 +32,7 @@ const typeController = (e) => {
   const newLetter = e.key;
 
   // Handle backspace press
-  if (newLetter == "Backspace") {
+  if (newLetter == "Backspace" && userText.length > 0) {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
