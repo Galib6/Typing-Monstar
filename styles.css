@@ -22,7 +22,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 2vw;
+  font-size: 30px;
   border-radius: 15px;
   background: rgb(255, 255, 255);
   background: linear-gradient(92.49deg,
@@ -197,8 +197,8 @@ button {
     width: 100%;
   }
 
-  #display {
-    font-size: px;
+  #question {
+    font-size: 15px;
   }
 
 }
