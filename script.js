@@ -108,7 +108,7 @@ const start = () => {            //---------------------------------2-----------
   // If already started, do not start again
   if (startTime) return;
 
-  let count = 1;
+  let count = 4;
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
