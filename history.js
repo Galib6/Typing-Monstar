@@ -1,6 +1,8 @@
 const histories = document.getElementById("histories");
 
-function addHistory(questionText, timeTaken, errorCount) {
+function addHistory(questionText, timeTaken, errorCount, letterPerMin) {
+  console.log(letterPerMin)
+
   const newRow = document.createElement("div");
   newRow.classList.add("card1");
 
@@ -8,9 +10,10 @@ function addHistory(questionText, timeTaken, errorCount) {
   <div class="col">
       <div class="card bg-transparent">
         <div class="card-body">
-            <h3>${questionText}</h3>
-            <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-            <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+            <h4>${questionText}</h4>
+            <p>You took: <span class="bold mb-0">${timeTaken}</span> seconds</p>
+            <p>You made <span class="bold red mb-0">${errorCount}</span> mistakes</p>
+            <p>Your Typing Speed:<span class="bold red mb-0"> ${letterPerMin}</span> Letter Per Min</p>
         </div>
       </div>
     </div>
@@ -19,7 +22,7 @@ function addHistory(questionText, timeTaken, errorCount) {
   histories.appendChild(newRow);
 
   let previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
-  previousTests.push({ questionText, timeTaken, errorCount });
+  previousTests.push({ questionText, timeTaken, errorCount, letterPerMin });
   localStorage.setItem("testHistory", JSON.stringify(previousTests));
 
   displayHistory();
@@ -37,9 +40,10 @@ function displayHistory() {
     <div class="col">
       <div class="card  bg-transparent">
         <div class="card-body">
-              <h2>${test.questionText}</h2>
-              <p>You took: <span class="bold">${test.timeTaken}</span> seconds</p>
-              <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
+              <h4>${test.questionText}</h4>
+              <p>You took: <span class="bold mb-0">${test.timeTaken}</span> seconds</p>
+              <p>You made <span class="bold red mb-0">${test.errorCount}</span> mistakes</p>
+              <p>Your Typing Speed:<span class="bold red mb-0"> ${test.letterPerMin}</span> Letter Per Min</p>
         </div>
       </div>
     </div>

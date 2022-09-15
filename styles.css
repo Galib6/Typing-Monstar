@@ -147,11 +147,11 @@ button {
   cursor: pointer;
 }
 
-#histories {
+/* #histories {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
+} */
 
 .card {
   width: 300px;

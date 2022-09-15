@@ -18,6 +18,7 @@ let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
+let lmp = "";
 
 // Load and display question
 fetch("./texts.json")
@@ -78,7 +79,7 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = Math.floor(new Date().getTime());
   const timeTaken = Math.floor((finishTime - startTime) / 1000);
-  const wpm = Math.floor((timeTaken / (userText.length)) * 60);
+  const lpm = Math.floor(((userText.length) / timeTaken) * 60);
 
 
   // show result modal
@@ -92,13 +93,13 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <p>Your Typing Speed:<span class="bold red"> ${wpm}</span> Letter Per Min</p>
+    <p>You took: <span class="bold ">${timeTaken}</span> seconds</p>
+    <p>You made <span class="bold red ">${errorCount}</span> mistakes</p>
+    <p>Your Typing Speed:<span class="bold red"> ${lpm}</span> Letter Per Min</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, errorCount, lpm);
 
   // restart everything
   startTime = null;
